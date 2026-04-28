@@ -1,0 +1,91 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  color-scheme: light;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(240, 207, 120, 0.18),
+      transparent 22%),
+    radial-gradient(
+      circle at 12% 16%,
+      rgba(129, 76, 214, 0.22),
+      transparent 24%),
+    radial-gradient(
+      circle at 88% 10%,
+      rgba(65, 122, 222, 0.18),
+      transparent 22%),
+    linear-gradient(
+      180deg,
+      #12091f 0%,
+      #1a1034 34%,
+      #191c47 62%,
+      #f7f0ff 62%,
+      #fbf9ff 100%);
+  font-family: "Manrope", sans-serif;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+}
+button,
+input,
+textarea {
+  font: inherit;
+}
+::selection {
+  background: rgba(112, 57, 171, 0.18);
+}
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #d4ac42;
+  outline-offset: 3px;
+}
+.hero-floral {
+  background:
+    radial-gradient(
+      circle at 8% 15%,
+      rgba(164, 111, 223, 0.28),
+      transparent 24%),
+    radial-gradient(
+      circle at 92% 10%,
+      rgba(56, 118, 228, 0.18),
+      transparent 22%),
+    radial-gradient(
+      circle at 24% 82%,
+      rgba(236, 196, 101, 0.18),
+      transparent 18%);
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 700ms ease, transform 700ms ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

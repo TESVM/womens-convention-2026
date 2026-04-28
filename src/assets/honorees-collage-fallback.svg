@@ -1,0 +1,39 @@
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bg" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(300 220) rotate(44) scale(1140 1080)">
+      <stop stop-color="#FFF7E9"/>
+      <stop offset="0.5" stop-color="#E9DEFF"/>
+      <stop offset="1" stop-color="#D7C4F7"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(600 580) rotate(90) scale(520)">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="30" y="40" width="1140" height="1120" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="20" stdDeviation="20" flood-color="#3F2B5F" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="1200" rx="80" fill="url(#bg)"/>
+  <g filter="url(#shadow)">
+    <circle cx="600" cy="600" r="500" fill="white" fill-opacity="0.84" stroke="#E7D49B" stroke-width="18"/>
+  </g>
+  <circle cx="600" cy="600" r="380" fill="url(#glow)"/>
+  <circle cx="312" cy="430" r="126" fill="#F0D36A" fill-opacity="0.7"/>
+  <circle cx="866" cy="414" r="140" fill="#FFFFFF" fill-opacity="0.72"/>
+  <circle cx="594" cy="284" r="160" fill="#4B76BF" fill-opacity="0.26"/>
+  <circle cx="290" cy="848" r="120" fill="#80B5A2" fill-opacity="0.36"/>
+  <circle cx="872" cy="856" r="132" fill="#E0CCF8" fill-opacity="0.48"/>
+  <circle cx="600" cy="824" r="114" fill="#F7E9A5" fill-opacity="0.42"/>
+  <path d="M160 234C210 210 240 184 274 134" stroke="#3A8D34" stroke-width="16" stroke-linecap="round"/>
+  <path d="M212 192C198 160 198 138 210 112" stroke="#60A743" stroke-width="14" stroke-linecap="round"/>
+  <path d="M150 830C198 850 232 884 262 938" stroke="#3A8D34" stroke-width="16" stroke-linecap="round"/>
+  <path d="M990 220C934 236 900 212 856 166" stroke="#3A8D34" stroke-width="16" stroke-linecap="round"/>
+  <path d="M1010 872C952 862 912 886 872 932" stroke="#3A8D34" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="236" cy="158" r="30" fill="#E15377"/>
+  <circle cx="184" cy="872" r="24" fill="#E15377"/>
+  <circle cx="914" cy="140" r="28" fill="#E15377"/>
+  <circle cx="1010" cy="918" r="28" fill="#E15377"/>
+  <text x="600" y="542" text-anchor="middle" fill="#2B1841" font-family="Georgia, serif" font-size="84" font-weight="700">Honoring Women</text>
+  <text x="600" y="630" text-anchor="middle" fill="#2B1841" font-family="Georgia, serif" font-size="84" font-weight="700">of Excellence</text>
+  <text x="600" y="716" text-anchor="middle" fill="#7E651F" font-family="Arial, sans-serif" font-size="34" font-weight="700" letter-spacing="8">READY FOR YOUR UPLOADED COLLAGE</text>
+</svg>
