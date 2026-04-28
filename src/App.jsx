@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
-import aohLogo from "./assets/aoh-logo.svg";
-import honoreeCollage from "./assets/honorees-collage-fallback.svg";
+import aohLogo from "./assets/aoh-logo-exact.png";
+import honoreeCollage from "./assets/honorees-collage.png";
 
 const navItems = [
   ["Home", "home"],
@@ -283,7 +283,7 @@ function Honorees() {
               <div className="rounded-[2.2rem] border-4 border-[#eed38c] bg-white/12 p-3">
                 <img
                   src={honoreeCollage}
-                  alt="Women of excellence honored by the conference."
+                  alt="Honoring Women of Excellence collage featuring conference women leaders."
                   className="aspect-square w-full rounded-[2rem] object-cover object-center"
                 />
               </div>

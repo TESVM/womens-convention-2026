@@ -21724,11 +21724,11 @@ var import_client = __toESM(require_client());
 // src/App.jsx
 var import_react = __toESM(require_react());
 
-// src/assets/aoh-logo.svg
-var aoh_logo_default = "./assets/aoh-logo-BL5IH6U4.svg";
+// src/assets/aoh-logo-exact.png
+var aoh_logo_exact_default = "./assets/aoh-logo-exact-23ZZRUNC.png";
 
-// src/assets/honorees-collage-fallback.svg
-var honorees_collage_fallback_default = "./assets/honorees-collage-fallback-JVGP4CPZ.svg";
+// src/assets/honorees-collage.png
+var honorees_collage_default = "./assets/honorees-collage-YRSLEBWE.png";
 
 // src/App.jsx
 var import_jsx_runtime = __toESM(require_jsx_runtime());
@@ -21773,7 +21773,7 @@ function Header() {
   return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("header", { className: "sticky top-0 z-50 border-b border-white/10 bg-[rgba(18,9,34,0.72)] backdrop-blur-xl", children: [
     /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "mx-auto flex w-[min(1180px,calc(100%-1.5rem))] items-center justify-between py-3", children: [
       /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", { href: "#home", className: "flex items-center gap-3", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", { src: aoh_logo_default, alt: "AOH Church of God logo", className: "h-12 w-12 rounded-full bg-white/90 object-contain p-1" }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", { src: aoh_logo_exact_default, alt: "AOH Church of God logo", className: "h-12 w-12 rounded-full bg-white/90 object-contain p-1" }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "hidden sm:block", children: [
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "font-display text-xl font-semibold text-white", children: "National Women's Conference" }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "text-xs uppercase tracking-[0.24em] text-[#f1ddb0]", children: "Apostolic Overcoming Holy Church of God, Inc." })
@@ -21854,7 +21854,7 @@ function Hero() {
       {
         className: "absolute inset-0 opacity-20 blur-2xl",
         style: {
-          backgroundImage: `url(${honorees_collage_fallback_default})`,
+          backgroundImage: `url(${honorees_collage_default})`,
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover"
@@ -21909,7 +21909,7 @@ function Hero() {
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "overflow-hidden rounded-[1.6rem] border border-white/14 bg-white/6 p-3", children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
           "img",
           {
-            src: honorees_collage_fallback_default,
+            src: honorees_collage_default,
             alt: "Collage honoring women of excellence connected to the conference.",
             className: "h-[320px] w-full rounded-[1.2rem] object-cover object-center shadow-soft md:h-[420px]"
           }
@@ -21955,8 +21955,8 @@ function Honorees() {
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "relative rounded-[2.6rem] border border-white/12 bg-white/8 p-4 shadow-glow backdrop-blur-xl", children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "rounded-[2.2rem] border-4 border-[#eed38c] bg-white/12 p-3", children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
         "img",
         {
-          src: honorees_collage_fallback_default,
-          alt: "Women of excellence honored by the conference.",
+          src: honorees_collage_default,
+          alt: "Honoring Women of Excellence collage featuring conference women leaders.",
           className: "aspect-square w-full rounded-[2rem] object-cover object-center"
         }
       ) }) })
@@ -22141,7 +22141,7 @@ function Cta() {
 }
 function Footer() {
   return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("footer", { className: "bg-[#12091f] px-3 py-10 md:px-6", children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "mx-auto grid w-[min(1180px,100%)] gap-8 rounded-[2rem] border border-white/10 bg-white/5 p-7 text-white/82 shadow-glow md:grid-cols-[auto_1fr] md:items-center", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "flex justify-center md:justify-start", children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", { src: aoh_logo_default, alt: "AOH Church of God logo", className: "h-28 w-28 rounded-full bg-white/90 object-contain p-2" }) }),
+    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "flex justify-center md:justify-start", children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", { src: aoh_logo_exact_default, alt: "AOH Church of God logo", className: "h-28 w-28 rounded-full bg-white/90 object-contain p-2" }) }),
     /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "text-center md:text-left", children: [
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "font-display text-3xl font-semibold text-white", children: "Apostolic Overcoming Holy Church of God, Inc." }),
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "mt-2 text-sm font-bold uppercase tracking-[0.24em] text-[#f0d89d]", children: "Established March 16, 1916" }),
