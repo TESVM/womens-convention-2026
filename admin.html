@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AOH Women's Convention Admin</title>
+<meta name="description" content="AOH Women's Convention content management dashboard.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body class="admin-body">
+  <header class="admin-header">
+    <div>
+      <p class="admin-kicker">AOH Women's Convention Admin</p>
+      <h1>AOH Women's Convention Admin</h1>
+    </div>
+    <div class="admin-header-actions">
+      <button type="button" id="previewButton" class="admin-secondary">Preview Website</button>
+      <button type="button" id="logoutButton" class="admin-link">Log Out</button>
+    </div>
+  </header>
+
+  <main class="admin-layout">
+    <aside class="admin-sidebar">
+      <a href="#overview">Dashboard Overview</a>
+      <a href="#general">General Settings</a>
+      <a href="#media">Media Manager</a>
+      <a href="#hero">Hero Section Editor</a>
+      <a href="#schedule">Schedule Editor</a>
+      <a href="#hotel">Hotel & Travel Editor</a>
+      <a href="#contact">Contact Editor</a>
+      <a href="#publish">Save and Publish</a>
+    </aside>
+
+    <section class="admin-content">
+      <section id="overview" class="admin-card">
+        <div class="admin-card-head">
+          <h2>Dashboard Overview</h2>
+          <p>Website status, last updated details, and quick actions.</p>
+        </div>
+        <div class="overview-grid">
+          <div>
+            <span class="overview-label">Website status</span>
+            <strong id="websiteStatus">Loading</strong>
+          </div>
+          <div>
+            <span class="overview-label">Last updated</span>
+            <strong id="lastUpdated">Loading</strong>
+          </div>
+          <div>
+            <span class="overview-label">Quick edit</span>
+            <strong>General, Hero, Schedule, Media</strong>
+          </div>
+        </div>
+      </section>
+
+      <form id="adminForm">
+        <section id="general" class="admin-card">
+          <div class="admin-card-head">
+            <h2>General Settings</h2>
+            <p>Title, theme, scripture, dates, times, location, footer basics.</p>
+          </div>
+          <div class="admin-grid two-up">
+            <label><span>Convention Title</span><input name="site.conventionTitle" type="text"></label>
+            <label><span>Organization</span><input name="hero.subtitle" type="text"></label>
+            <label><span>Theme</span><input name="site.conventionTheme" type="text"></label>
+            <label><span>Scripture</span><input name="site.scripture" type="text"></label>
+            <label><span>Dates</span><input name="site.dates" type="text"></label>
+            <label><span>Times</span><input name="site.times" type="text"></label>
+            <label><span>Location</span><input name="site.location" type="text"></label>
+            <label><span>Registration Link</span><input name="site.registrationLink" type="url"></label>
+            <label><span>Footer Founded Text</span><input name="site.footerFounded" type="text"></label>
+            <label><span>Countdown Target</span><input name="site.countdownTarget" type="text"></label>
+          </div>
+        </section>
+
+        <section id="media" class="admin-card">
+          <div class="admin-card-head">
+            <h2>Media Manager</h2>
+            <p>Upload logos, banners, photos, flyers, and documents to Cloudflare R2.</p>
+          </div>
+          <div class="admin-grid two-up">
+            <label>
+              <span>Media Slot</span>
+              <select id="mediaKeySelect" name="media.target">
+                <option value="aoh_logo">AOH logo</option>
+                <option value="womens_logo">Women's convention logo</option>
+                <option value="hero_banner">Hero banner image</option>
+                <option value="about_image">About section image</option>
+                <option value="leader_1">Leader photo 1</option>
+                <option value="leader_2">Leader photo 2</option>
+                <option value="leader_3">Leader photo 3</option>
+                <option value="gallery_1">Gallery photo 1</option>
+                <option value="gallery_2">Gallery photo 2</option>
+                <option value="gallery_3">Gallery photo 3</option>
+                <option value="gallery_4">Gallery photo 4</option>
+                <option value="gallery_5">Gallery photo 5</option>
+                <option value="gallery_6">Gallery photo 6</option>
+                <option value="flyer_pdf">PDF flyer</option>
+                <option value="document_1">Downloadable document</option>
+              </select>
+            </label>
+            <label>
+              <span>Category</span>
+              <select id="mediaCategory">
+                <option value="logos">Logos</option>
+                <option value="banners">Banners</option>
+                <option value="leaders">Leaders</option>
+                <option value="gallery">Gallery</option>
+                <option value="pdfs">PDFs</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="admin-grid two-up">
+            <label class="file-input">
+              <span>Upload File</span>
+              <input type="file" id="mediaFile" accept=".jpg,.jpeg,.png,.webp,.svg,.pdf">
+            </label>
+            <div class="media-preview">
+              <span>Preview</span>
+              <div id="mediaPreview" class="media-preview-box">No file selected</div>
+            </div>
+          </div>
+
+          <div class="admin-actions">
+            <button type="button" id="uploadButton" class="admin-secondary">Upload New File</button>
+            <button type="button" id="copyMediaUrl" class="admin-link">Copy File URL</button>
+          </div>
+
+          <div class="admin-grid two-up media-url-grid">
+            <label><span>Current Slot URL</span><input id="mediaUrlInput" name="media.currentUrl" type="url"></label>
+            <label><span>Uploaded File URL</span><input id="uploadedMediaUrl" type="url" readonly></label>
+          </div>
+
+          <p class="storage-note">Cloudflare R2 free tier includes limited free storage. Please delete unused large files when they are no longer needed.</p>
+        </section>
+
+        <section id="hero" class="admin-card">
+          <div class="admin-card-head">
+            <h2>Hero Section Editor</h2>
+            <p>Heading, subtitle, buttons, scripture callout, and hero banner settings.</p>
+          </div>
+          <div class="admin-grid two-up">
+            <label><span>Hero Heading</span><input name="hero.heading" type="text"></label>
+            <label><span>Hero Tagline</span><input name="hero.tagline" type="text"></label>
+            <label><span>Theme Text</span><input name="hero.themeText" type="text"></label>
+            <label><span>Badge Dates</span><input name="hero.badgeDates" type="text"></label>
+            <label><span>Badge Location</span><input name="hero.badgeLocation" type="text"></label>
+            <label><span>Primary Button Text</span><input name="hero.primaryButtonText" type="text"></label>
+            <label><span>Primary Button Link</span><input name="hero.primaryButtonLink" type="text"></label>
+            <label><span>Secondary Button Text</span><input name="hero.secondaryButtonText" type="text"></label>
+            <label><span>Secondary Button Link</span><input name="hero.secondaryButtonLink" type="text"></label>
+            <label><span>Scripture Text</span><textarea name="hero.scriptureText" rows="3"></textarea></label>
+            <label><span>Scripture Reference</span><input name="hero.scriptureReference" type="text"></label>
+          </div>
+        </section>
+
+        <section id="schedule" class="admin-card">
+          <div class="admin-card-head">
+            <h2>Schedule Editor</h2>
+            <p>Add schedule days, edit times, update item descriptions, and remove entries.</p>
+          </div>
+          <div class="admin-grid two-up">
+            <label><span>Schedule Heading</span><input name="schedule.heading" type="text"></label>
+            <label><span>Schedule Intro</span><input name="schedule.intro" type="text"></label>
+          </div>
+          <div id="scheduleEditor" class="schedule-editor"></div>
+          <div class="admin-actions">
+            <button type="button" id="addScheduleDay" class="admin-secondary">Add Schedule Day</button>
+          </div>
+        </section>
+
+        <section id="hotel" class="admin-card">
+          <div class="admin-card-head">
+            <h2>Hotel and Travel Editor</h2>
+            <p>Hotel name, address, booking link, and trip notes.</p>
+          </div>
+          <div class="admin-grid two-up">
+            <label><span>Hotel Heading</span><input name="hotel.heading" type="text"></label>
+            <label><span>Hotel Intro</span><input name="hotel.intro" type="text"></label>
+            <label><span>Hotel Name</span><input name="hotel.cards.0.title" type="text"></label>
+            <label><span>Hotel Tag</span><input name="hotel.cards.0.tag" type="text"></label>
+            <label class="full"><span>Hotel Notes</span><textarea name="hotel.cards.0.text" rows="4"></textarea></label>
+            <label><span>Address / Travel Label</span><input name="contact.address" type="text"></label>
+            <label><span>Booking Link</span><input name="hotel.bookingLink" type="url"></label>
+          </div>
+        </section>
+
+        <section id="contact" class="admin-card">
+          <div class="admin-card-head">
+            <h2>Contact Editor</h2>
+            <p>Email, phone, address, about section text, and footer information.</p>
+          </div>
+          <div class="admin-grid two-up">
+            <label><span>Contact Heading</span><input name="contact.heading" type="text"></label>
+            <label><span>Contact Email</span><input name="contact.email" type="email"></label>
+            <label><span>Contact Phone</span><input name="contact.phone" type="text"></label>
+            <label><span>Contact Address</span><input name="contact.address" type="text"></label>
+            <label class="full"><span>About Lead</span><textarea name="about.lead" rows="3"></textarea></label>
+            <label class="full"><span>About Paragraph 1</span><textarea name="about.paragraphs.0" rows="4"></textarea></label>
+            <label class="full"><span>About Paragraph 2</span><textarea name="about.paragraphs.1" rows="4"></textarea></label>
+            <label class="full"><span>Footer Information</span><textarea name="site.footerInfo" rows="4"></textarea></label>
+          </div>
+        </section>
+
+        <section id="publish" class="admin-card">
+          <div class="admin-card-head">
+            <h2>Save and Publish</h2>
+            <p>Save a draft, publish changes, or open the live preview.</p>
+          </div>
+          <div class="admin-actions">
+            <button type="button" id="saveDraftButton" class="admin-secondary">Save Draft</button>
+            <button type="button" id="publishButton" class="admin-primary">Publish Changes</button>
+            <button type="button" id="previewButtonBottom" class="admin-link">Preview Website</button>
+          </div>
+          <p id="adminStatus" class="admin-status" aria-live="polite"></p>
+        </section>
+      </form>
+    </section>
+  </main>
+
+  <script src="/assets/js/admin.js" defer></script>
+</body>
+</html>

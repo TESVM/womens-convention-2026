@@ -1,0 +1,4 @@
+SESSION_SECRET=replace-with-a-long-random-secret
+TURNSTILE_SECRET_KEY=
+R2_PUBLIC_BASE_URL=https://pub-b3b93974fe9544bd9e4ebccbe6725604.r2.dev
+TURNSTILE_SITE_KEY=

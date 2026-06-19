@@ -3,14 +3,9 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "build": "node ./build.mjs"
-  },
-  "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
-  },
-  "devDependencies": {
-    "esbuild": "^0.25.0",
-    "tailwindcss": "^3.4.17"
+    "build": "node -e \"console.log('Static Cloudflare Pages site ready.')\"",
+    "hash-password": "node ./scripts/hash-password.mjs",
+    "create-admin-sql": "node ./scripts/create-admin-sql.mjs",
+    "serve": "python3 -m http.server 3010"
   }
 }

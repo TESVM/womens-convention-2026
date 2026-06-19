@@ -1,0 +1,20 @@
+name = "aoh-womens-convention-2026"
+compatibility_date = "2026-06-18"
+pages_build_output_dir = "."
+
+[[d1_databases]]
+binding = "DB"
+database_name = "aoh_womens_convention_db"
+database_id = "35b81cc5-59fa-4fba-ab5b-dfef19a1c5b4"
+
+[[r2_buckets]]
+binding = "MEDIA_BUCKET"
+bucket_name = "aoh-womens-convention-media"
+
+[vars]
+R2_PUBLIC_BASE_URL = "https://pub-b3b93974fe9544bd9e4ebccbe6725604.r2.dev"
+TURNSTILE_SITE_KEY = ""
+
+# Set these as Cloudflare secrets, not plaintext vars:
+# SESSION_SECRET
+# TURNSTILE_SECRET_KEY
